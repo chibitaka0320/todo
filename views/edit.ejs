@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>todo-list</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/">TO DO</a>
+      </div>
+    </header>
+    <div class="top-wrapper">
+      <div class="container">
+        <div class="title">
+          <h4>TO DO リスト編集</h4>
+          <div class="clear"></div>
+        </div>
+        <div class="new">
+          <div class="new-box">
+              <div class="new-title">
+                <p>やること</p>
+              </div>
+            <form action="/update/<%=  use.id %>" method="post">
+              <textarea name="item" ><%= use.name %></textarea>
+              <input type="submit" value="編集">
+            </form>
+            <a href="/todo">戻る</a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
